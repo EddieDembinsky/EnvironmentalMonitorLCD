@@ -1,0 +1,16 @@
+# Arduino build files
+*.hex
+*.elf
+*.bin
+*.map
+
+# VS Code settings
+.vscode/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Backup or temp files
+*~
+*.swp
