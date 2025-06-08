@@ -1,4 +1,38 @@
-...
-...
-...
-...
+| Component       | Pin/Lead               | Connects To            |
+|-----------------|------------------------|------------------------|
+| LCD Display     | RS                     | Arduino pin 12         |
+|                 | E                      | Arduino pin 11         |
+|                 | D4                     | Arduino pin 5          |
+|                 | D5                     | Arduino pin 4          |
+|                 | D6                     | Arduino pin 3          |
+|                 | D7                     | Arduino pin 2          |
+|                 | VSS                    | GND                    |
+|                 | VDD                    | 5V                     |
+|                 | VO                     | Potentiometer middle   |
+|                 | RW                     | GND                    |
+|                 | A (LED+)               | 5V (w/ 220 resistor)   |
+|                 | K (LED-)               | GND                    |
+| Potentiometer   | Left pin               | 5V                     | <-- Potentiometer midddle pin is on top
+|                 | Middle pin             | LCD VO                 |
+|                 | Right pin              | GND                    |
+| DHT11 Sensor    | VCC (middle)           | 5V                     |
+|                 | GND (furthest from 's')| GND                    |
+|                 | Data (next to 's')     | Arduino pin 7          |
+| LDR             | One leg                | 5V                     |
+|                 | Other leg              | A1                     |
+| 10k Resistor    | One side               | A1                     |
+|                 | Other side             | GND                    |
+| Pushbutton      | One leg                | Arduino pin 8          |
+|                 | Other leg              | GND                    |
+
+Notes:
+-- Adjust potentiometer wiper to ensure LCD contrast is visible.
+
+-- Place pushbutton with jumpers on opposite rows and columns to ensure proper function.
+
+-- Leave physical space around the pushbutton for easy pressing (no obstructing wires).
+
+-- Use a mini breadboard for the LDR and DHT11 sensor to avoid hand interference during measurements.
+
+-- Use the connected rows on the breadboard to wire both the LDR and its 10kΩ resistor to analog pin A1.
+
